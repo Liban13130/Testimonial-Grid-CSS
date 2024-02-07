@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Barlow Condensed";
+}
+
+body{
+    background-color: hsl(0, 0%, 87%);
+}
+
+
+.item{
+    border-radius: 15px;
+}
+
+.block{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 30px;
+    padding: 20px;
+    grid-template-areas: 
+    "daniel daniel daniel jonathan kira"
+    "daniel daniel daniel jonathan kira"
+    "jeanette patrick patrick patrick kira"
+    "jeanette patrick patrick patrick kira"
+    ;
+}
+
+.block1{
+    background-color: hsl(263, 55%, 52%);
+    display: grid;
+    grid-area: daniel;
+}
+
+.block2{
+    background-color: hsl(217, 19%, 35%);
+    display: grid;
+    grid-area: jonathan;
+}
+
+.block3{
+    background-color: white;
+    display: grid;
+    grid-area: kira;
+}
+
+.block4{
+    background-color: white;
+    display: grid;
+    grid-area: jeanette;
+}
+
+.block5{
+    background-color: hsl(219, 29%, 14%);
+    display: grid;
+    grid-area: patrick;
+}
+
+/* GRID 1 */
+.contenue {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+.contenue h2{
+    color: white;
+}
+
+.contenue p{
+    color: hsl(0, 0%, 77%);
+}
+
+.contenue img{
+    position: absolute;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.contenue .block-top{
+    display: flex;
+    flex-direction: column  ;
+}
+
+.contenue .block-top h4{
+    margin-left: 60px;
+    color: white;
+}
+
+.contenue .block-top p{
+    margin-left: 60px;
+}
+
+
+/* GRID 2 */
+.contenue2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.contenue2 img{
+    position: absolute;
+    height: 40px;
+    border-radius: 50%;
+}
+
+
+.contenue2 .block-top h4{
+    margin-left: 60px;
+    color: white;
+}
+
+.contenue2 .block-top p{
+    margin-left: 60px;
+}
+
+.contenue2 h2{
+    color: white;
+}
+
+.contenue2 p{
+    color: hsl(0, 0%, 77%);
+}
+
+/* GRID 3 */
+.contenue3{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.contenue3 img{
+    position: absolute;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.contenue3 .block-top h4{
+    margin-left: 60px;
+    color: hsl(219, 29%, 14%);
+}
+
+.contenue3 .block-top p{
+    margin-left: 60px;
+}
+
+.contenue3 h2{
+    color: hsl(219, 29%, 14%);
+}
+
+.contenue3 p{
+    color: hsl(0, 0%, 64%);
+}
+
+/* GRID 4 */
+
+.contenue4{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.contenue4 img{
+    position: absolute;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.contenue4 .block-top h4{
+    margin-left: 60px;
+    color: hsl(219, 29%, 14%);
+}
+
+.contenue4 .block-top p{
+    margin-left: 60px;
+}
+
+.contenue4 h2{
+    color: hsl(219, 29%, 14%);
+}
+
+.contenue4 p{
+    color: hsl(0, 0%, 64%);
+}
+
+/* GRID 5 */
+.contenue5{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.contenue5 img{
+    position: absolute;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.contenue5 .block-top h4{
+    margin-left: 60px;
+    color: hsl(0, 0%, 100%);
+}
+
+.contenue5 .block-top p{
+    margin-left: 60px;
+}
+
+.contenue5 h2{
+    color: white;
+}
+
+.contenue5 p{
+    color: hsl(0, 0%, 64%);
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1410px) {
+    p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1270px) {
+    p{
+        font-size: 14px;
+    }
+
+    .contenue, .contenue2, .contenue3, .contenue4, .contenue5{
+        justify-content: space-evenly;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 1165px) {
+    p{
+        font-size: 13px;
+    }
+
+    h2{
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 1090px) {
+    p{
+        font-size: 12px;
+        line-height: 19px;
+    }
+
+    h2{
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .block{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.5fr 1.5fr 0.5fr 1fr;
+        grid-template-areas: 
+        "daniel"
+        "jonathan"
+        "kira"
+        "jeanette"
+        "patrick"
+        ;
+    }
+
+    h2{
+        margin: 10px 0;
+    }
+}
